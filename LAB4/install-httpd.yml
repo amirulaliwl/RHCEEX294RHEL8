@@ -1,0 +1,22 @@
+---
+- name: install http
+  hosts: ansible02.example.com
+  tasks:
+    - name: install httpd
+      package:
+        name: httpd
+        state: present
+    - name: create an index.html
+      copy:
+        content: 'welcome to ansible02.example.com webserver'
+        dest: /var/www/html/index.html
+    - name: start http service
+      service:
+        name: httpd
+        state: started
+        enabled: true
+    - name: open firewall
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled

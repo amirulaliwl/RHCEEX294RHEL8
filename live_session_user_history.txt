@@ -1,0 +1,1000 @@
+cd ../lesson5/
+ls
+cd arrays/
+ls
+cat arrays.yml 
+vim vars/users 
+cp vars/users vars/users2
+vim vars/users2 
+vim arrays.yml 
+ansible-playbook arrays.yml 
+cat arrays.yml 
+cat vars/users2
+ansible-playbook arrays.yml 
+pwd
+vim arrays-simple.yml 
+ansible-playbook arrays-simple.yml 
+cd vars
+ls
+cat users
+cat users2
+mv users users-array
+mv users2 users-list
+cd ..
+vim arrays-simple.yml 
+vim arrays.yml 
+ansible-playbook pl
+ansible-playbook arrays-simple.yml 
+ansible-playbook arrays.yml 
+vim arrays.yml 
+vim vars/users-array 
+cat vars/users-array 
+cat arrays-simple.yml 
+vim arrays-simple.yml 
+vim arrays.yml 
+cat arrays-simple.yml 
+cat arrays.yml 
+vim arrays.yml 
+ansible-playbook arrays.yml 
+cat arrays-simple.yml 
+ansible-playbook -m setup ansible1
+ansible ansible1 -m setup 
+cd ..
+ansible ansible1 -m setup 
+cd arrays/
+vim inventory 
+ansible ansible1 -m setup 
+ls
+cd vars
+ls
+cat users-array 
+mv users-array users-dictionary
+cd ..
+grep users-array *
+vim arrays-simple.yml 
+ansible-playbook arrays-simple.yml 
+ls vars
+mv vars/users-list vars/users-array
+ansible-playbook arrays-simple.yml 
+cat arrays.yml 
+cat vars/users-list
+mv vars/users-array vars/users-list
+ls vars/
+vim arrays-simple.yml 
+vim arrays.yml 
+ansible-playbook arrays.yml 
+cat arrays-simple.yml 
+cat vars/users-dictionary 
+grep dictionary *
+cat vars/users-list 
+cat arrays-simple.yml 
+cat arrays.yml 
+vim arrays.yml 
+ansible-playbook arrays.yml 
+ls
+rm *orig
+cat arrays-simple.yml 
+mv arrays-simple.yml multi-dictionary.yml
+cat arrays.yml 
+mv arrays.yml multi-lis.yml
+mv multi-lis.yml multi-list.yml
+vim multi-list.yml 
+vim multi-dictionary.yml 
+ls
+ls vars/
+cat vars/users-list 
+cat vars/users-dictionary 
+vim multi-list.yml 
+ansible-playbook multi-list.yml 
+vim multi-dictionary.yml 
+ansible-playbook multi-dictionary.yml 
+cd /home/ansible/rhce8/lesson5/
+ls
+cd ..
+ls
+ansible ansible1 -m setup > ansible1.facts
+less ansible1.facts 
+ansible ansible1 -m setup 
+cd rhce8/lesson5/
+ls
+cd facts/
+ls
+rm *retry
+cat facts.yml 
+cat ipfact.yml 
+pwd
+cd ../..
+vim listing66.yaml
+vim listing65.yaml
+vim listing65.yaml 
+ansible-playbook listing65.yaml 
+cd ..
+ansible-playbook listing65.yaml 
+mv rhce8/listing* .
+ansible-playbook listing65.yaml 
+ansible-playbook listing66.yaml 
+vim listing66.yaml 
+vim listing65.yaml 
+ansible-doc -l | grep fact | grep pack
+vim listing67.fact
+cd ansible-advanced/
+cd lab/
+ls
+cat lab-copy-facts.yml 
+cp lab-copy-facts.yml ../../listing68.yaml
+cd ../..
+vim listing68.yaml 
+ansible-playbook listing68.yaml 
+ansible -m setup -a "filter=ansible_facts.ansible_local"
+ansible all -m setup -a "filter=ansible_facts.ansible_local"
+ansible all -m setup | less
+ansible-doc setup
+ansible all -m setup -a "filter=ansible_local"
+ansible all -m setup -a "filter=ansible_facts['ansible_local']"
+ansible all -m setup -a "filter=ansible_facts['local']"
+ansible all -m yum -a "name=httpd state=absent"
+ansible-doc service
+vim custom.fact
+vom copy_facts.yaml
+vim copy_facts.yaml
+ansible-playbook copy_facts.yaml 
+ansible all -m setup -a "filter=ansible_local"
+ansible all -m yum -a "name=httpd state=absent"
+vim setup_with_facts.yaml
+ansible-playbook setup_with_facts.yaml 
+ansible ansible1 -a "systemctl status httpd"
+ls
+cat listing66.yaml 
+cat listing67.yaml 
+cat listing68.yaml 
+vin listing69.yaml
+vim listing69.yaml
+ansible-playbook listing69.yaml 
+vim listing69.yaml 
+cd rhce8/lesson5/
+ls
+cd arrays/
+ls
+cat multi-dictionary.yml 
+cat vars/users-list 
+cd
+vim listing610.yaml
+vim listing611.yaml
+ansible-playbook listing610.yaml 
+mkdir vars
+mv listing611.yaml vars/common
+ansible-playbook listing610.yaml 
+vim listing610.yaml 
+vim vars/common 
+cat vars/common 
+pwd
+cat rhce8/lesson5/webservers/site.yml 
+cat rhce8/lesson5/webservers/group_vars/lamp 
+mkdir chapter6
+cd chapter6/
+cp ../ansible.cfg .
+vim inventory
+vim webservers.yaml
+mkdir group_vars
+vim group_vars/webservers
+ansible-playbook webservers.yaml 
+cd ..
+cd rhce8/lesson5/arrays/
+ls
+cat vars/users-list 
+cat vars/users-dictionary 
+pwd
+cp vars/users-dictionary ~/listing613
+cp vars/users-list ~/listing612
+ls
+cat multi-list.yml 
+cat multi-dictionary.yml 
+cp multi-dictionary.yml ~/listing614.yaml
+vim ~/listing614.yaml 
+cd
+cp listing614.yaml listing615.yaml
+vim listing615.yaml 
+ansible-playbook listing615.yaml 
+vim listing615.yaml 
+vim listing614.yaml 
+ansible-playbook listing615.yaml 
+mkdir vars
+cp rhce8/lesson5/arrays/vars/* vars/
+ls vars
+ansible-playbook listing615.yaml 
+vim listing614.yaml 
+vim listing615.yaml 
+ansible localhost -m debug -a 'var=hostvars["ansible1"]'
+vim vaultfile1
+ansible-vault encrypt vaultfile1 
+cat vaultfile1 
+echo password > vaultfile2
+ansible-vault encrypt vaultfile2
+cat vaultfile2 
+ansible-vault --help
+pwd
+ls
+cd rhce8/
+ls
+cd lesson6
+ls
+cat register_
+cat register_command.yml 
+cd ../lesson5
+ls
+cd vault/
+ls
+rm *retry
+cat create-user.yml 
+cat secret.yml 
+cat create-user.yml 
+cd ../..
+cd lesson6/
+ls
+cat register_loop.yml 
+cat register_command.yml 
+cp register_command.yml ../listing617.yaml
+cp register_command.yml ../listing618.yaml
+cd ..
+mv listing61* ..
+cd ..
+vim listing617.yaml 
+ansible-playbook listing617.yaml 
+vim listing617
+vim listing617.yaml 
+mv listing617.yaml listing619.yaml
+vim listing619.yaml 
+cp listing619.yaml listing617.yaml
+vim listing617.yaml 
+cat listing618.yaml 
+mv listing618.yaml listing619.yaml
+vimn listing619.yaml 
+vim listing619.yaml 
+ansible-playbook listing619.yaml 
+vim listing619.yaml 
+ansible-playbook listing619.yaml 
+vim listing71.yaml
+ansible-playbook listing71.yaml 
+vim listing71.yaml
+cat listing614.yaml 
+vim listing71.yaml
+ls
+vim listing52.yaml 
+vim listing71.yaml
+ansible-playbook listing71.yaml 
+ansible ansible1 -m shell -a "systemctl list-units | grep smb"
+ansible ansible1 -m shell -a "systemctl list-units | grep samba"
+ssh ansible1
+vim listing71.yaml
+ansible-playbook listing71.yaml 
+vim listing71.yaml 
+cp listing71.yaml listing72.yaml
+vim listing71.yaml 
+ansible-playbook -vvC listing72.yaml 
+vim listing72.yaml 
+vim listing73.yaml
+ansible-playbook listing73.yaml 
+vim listing73.yaml
+ansible-playbook listing73.yaml 
+vim listing73.yaml 
+ls
+cat vars/users-dictionary 
+cp listing73.yaml listing74.yaml
+vim listing74.yaml 
+ansible-playbook listing74.yaml 
+vim listing74.yaml 
+ansible-playbook listing74.yaml 
+cat vars/users-list 
+vim listing74.yaml 
+vim vars/users-list
+ansible-playbook listing74.yaml 
+cp listing74.yaml listing73.yaml
+vim listing73.yaml 
+mv listing73.yaml listing74.yaml
+cat vars/users-list 
+cat vars/users-dictionary 
+ls
+cd rhce8/lesson6/
+ls
+cat register_loop.yml 
+vim ../../listing75.yaml
+ansible-playbook ../../listing75.yaml 
+cd ../..
+ls
+rm listing75.yaml 
+vim listing76.yaml
+ansible-playbook listing76.yaml 
+cat listing76.yaml 
+mv listing76.yaml lookup_plugin.yaml
+vim listing76.yaml
+ansible-playbook -Cvv listing76.yaml 
+cat listing76.yaml 
+ls
+cat listing76.yaml 
+cat listing74.yaml 
+mv listing76.yaml listing77.yaml
+vim listing76.yaml
+ansible-playbook listing76.yaml 
+vim listing76.yaml
+ansible-playbook listing76.yaml 
+vim listing76.yaml
+ansible-playbook listing76.yaml 
+ls
+mv listing77.yaml listing76.yaml
+cd rhce8/
+ls
+cd lesson6/
+ls
+grep when *
+cd ..
+vim listing77.yaml
+ansible-playbook listing77.yaml 
+vim listing77.yaml
+ansible-playbook -m setup | grep ansible_devices
+ansible-playbook all -m setup | grep ansible_devices
+ansible all -m setup | grep ansible_devices
+ansible all -m setup | less
+vim listing78.yaml
+ansible-playbook listing78.yaml 
+vim listing78.yaml
+ansible-playbook listing78.yaml 
+vim listing78.yaml
+ansible-playbook listing78.yaml 
+vim listing78.yaml
+ansible all -m setup | less
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml 
+mv listing79.yaml failed_listing79.yaml
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml
+ansible-playbook listing79.yaml 
+vim listing79.yaml 
+grep when rhce8/lesson6/*
+cp rhce8/lesson6/ifsize.yml listing710.yaml
+cp listing710.yaml listing711.yaml
+vim listing710.yaml 
+ansible -m setup | less
+ansible ansible1 -m setup | less
+vim listing710.yaml 
+ansible-playbook listing710.yaml 
+vim listing710.yaml 
+
+vim listing710.yaml 
+vim listing79.yaml 
+cat listing710.yaml 
+cat listing711.yaml 
+vim listing711.yaml 
+ansible-playbook listing711.yaml 
+vim listing711.yaml 
+ls rhce8/lesson6/
+cat rhce8/lesson6/when_multiple_complex.yml 
+cp rhce8/lesson6/when_multiple_complex.yml listing712.yaml
+vim listing712.yaml 
+ansible-playbook listing712.yaml 
+vim listing712.yaml 
+ansible-playbook listing712.yaml 
+vim listing712.yaml 
+ansible-playbook listing712.yaml 
+vim listing712.yaml 
+mv listing711.yaml listing713.yaml
+pwd
+ls
+vim listing711.yaml
+ansible-playbook listing711.yaml 
+vim listing711.yaml 
+vim listing713.yaml 
+ansible-playbook listing713.yaml 
+grep -R register rhce8/
+cd rhce8/lesson6/
+cat register_command.yml 
+cat register_homes.yml 
+cd ../..
+grep register *
+cat listing617.yaml 
+cat listing619.yaml 
+mv listing619.yaml listing715.yaml
+vim listing715
+vim listing715.yaml 
+ansible-playbook listing715.yaml 
+vim listing715.yaml 
+ansible-playbook listing715.yaml 
+vim exercise72.yaml
+ansible ansible1 -m service -a "name=sshd state=stopped"
+ansible-playbook exercise72.yaml 
+ansible ansible1 -m service -a "name=sshd state-started"
+ansible ansible1 -m service -a "name=sshd state=started"
+ansible-playbook exercise72.yaml 
+ansible ansible1 -m yum -m "name=httpd state=latest"
+
+ansible-playbook exercise72.yaml 
+ssh ansible1
+ansible ansible1 -m service -a "name=httpd state=started"
+ansible-playbook exercise72.yaml 
+cd rhce8/lesson6/
+ls
+cat loopservices.yml 
+cat loopusers.yml 
+cd ..
+cat listing74.yaml 
+cat vars/users-list
+ansible-doc yum
+cat listing74.yaml 
+vim vars/packages
+vim exercise71.yaml
+ansible-playbook exercise71.yaml 
+ls rhce8/lesson6/
+grep handler rhce8/lesson6/*
+vim rhce8/lesson6/handlers.yml 
+vim listing716.yaml
+ansible-playbook listing716.yaml 
+ansible-doc file
+ls rhce8//lesson7/
+cat rhce8/lesson7/copy.yml
+ls rhce8//lesson7/
+cat rhce8/lesson7/hostsfile.yml
+cat rhce8/lesson7/file.yml
+cat rhce8/lesson4
+ls rhce8/lesson4
+cat rhce8/lesson4/vsftpd.yml 
+vim listing716.yaml
+ansible-playbook listing716.yaml 
+vim listing716.yaml 
+touch /tmp/nothing
+ansible-playbook listing716.yaml 
+ansible-playbook ansible2 -m file -a "name=/var/www/html/index.html state=absent"
+ansible ansible2 -m file -a "name=/var/www/html/index.html state=absent"
+ansible-playbook listing716.yaml 
+grep -R ignore_errors rhce8/*
+vim rhce8/lesson6/failure.yml 
+vim rhce8/lesson6/restart.yml 
+vim listing720.yaml
+grep -R force_handlers rhce8/*
+cp listing716.yaml listing721.yaml
+vim listing721.yaml 
+grep -R failed_when rhce8/*
+cat rhce8/lesson6/failure.yml 
+vim listing722.yaml
+ansible-playbook listing722.yaml 
+grep -R 'fail:' rhce8/*
+ansible-doc fail
+vim listing724.yaml
+ansible-playbook listing724.yaml 
+vim listing724.yaml
+ansible-playbook listing724.yaml 
+vim listing724.yaml
+ansible-playbook listing724.yaml 
+grep -R 'changed_when:' rhce8/*
+cat rhce8/lesson6/changed.yml 
+vim listing725.yaml
+cp listing725.yaml listing726.yaml
+vim listing725.yaml 
+ansible-playbook listing725.yaml 
+mv listing726.yaml listing727.yaml
+vim listing727.yaml 
+ansible-playbook listing727.yaml 
+grep -R 'block:' rhce8/*
+cat rhce8/lesson6/blocks.yml 
+cat rhce8/lesson6/blocks2.yml 
+cat rhce8/lesson17/packagefacts.yml 
+cat rhce8/lesson6/blocks.yml 
+vim listing729.yaml
+vim listing730.yaml
+ansible-playbook listing730.yaml 
+vim listing730.yaml 
+ansible-playbook listing730.yaml 
+ls
+grep -R 'block:' rhce8/*
+vim rhce8/lesson17/packagefacts.yml
+vim LABSOLUTIONS.txt
+ls
+grep -R "handler" *
+cd ansible-advanced/handlers/
+ls
+cat lab-handlers.
+cat lab-handlers.yml 
+ls
+cat force-handlers.yml 
+cd ..
+vim exercise73.yaml
+ansible-playbook exercise73.yaml 
+ssh root@ansible1
+vim exercise73.yaml
+ansible-playbook exercise73.yaml 
+vim exercise73.yaml
+ansible-playbook exercise73.yaml 
+vim exercise73.yaml
+ansible-playbook exercise73.yaml 
+vim exercise73.yaml
+ansible-playbook exercise73.yaml 
+vim exercise73.yaml 
+grep -R block *
+cat rhce8/lesson7/copy.yml 
+cat rhce8/lesson7/blocks2.yml 
+cat rhce8/lesson6/blocks2.yml 
+cat rhce8/lesson17/packagefacts.yml 
+vim exercise732.yaml
+ansible-playbook exercise732.yaml 
+vim exercise732.yaml
+git clone https://github.com/sandervanvugt/rhce8-live
+cd rhce8-live/
+grep -R 'block' *
+cd ..
+cat exercise732.yaml 
+mv exercise732.yaml exercise74.yaml
+vim exercise74.yaml 
+cd rhce8-book/
+vim listing107.yaml
+ansible-playbook listing107.yaml 
+vim listing107.yaml 
+vim tasks/firewall.yaml 
+vim tasks/service.yaml 
+vim listing107.yaml 
+ansible-playbook listing107-wrong.yaml 
+ls
+exit
+cd rhce8-book/
+mkdir roles
+ls
+ls roles/
+cat roles/motd/templates/motd.j2 
+ls
+cat roles/motd/defaults/
+cat roles/motd/defaults/main.yml 
+cat roles/motd/meta/main.yml 
+ls
+vim exercise91.yaml 
+ansible-playbook exercise91.yaml 
+ansible ansible2 -a "cat /etc/motd"
+cd ..
+ls
+cd gooiweg/meta/
+vim main.yml 
+cd
+ansible-galaxy search --platform EL
+ansible-galaxy --help
+ansible-galaxy search --help
+ansible-galaxy --author geerlingguy --platform ES
+ansible-galaxy search --author geerlingguy --platform ES
+ansible-galaxy search --author geerlingguy --platform EL
+ansible-galaxy info geerlingguy.docker
+cd rhce8-book/
+cat listing96.yaml 
+cd ../rhce8-live/lesson11/
+ls
+cat nginx-role.yml 
+pwd
+cd ../../rhce8-book/
+vim exercise92.yaml
+vim ansible.cfg 
+ansible-galaxy install -r listing96.yaml 
+vim ansible.cfg 
+ansible-galaxy install -r listing96.yaml 
+ansible-playbook exercise92.yaml 
+vim exercise92.yaml 
+ansible-playbook exercise92.yaml 
+ansible-roles list
+ansible-galaxy list
+sudo yum install rhel-system-roles
+rpm -ql rhel-system-roles 
+cd /usr/share/ansible/roles/
+ls
+ansible-galaxy list
+ansible-config
+ansible-config view
+cd /usr/share/doc/rhel-system-roles/
+ls
+cd storage/
+ls
+less README.md 
+cd ../selinux/
+ls
+cd ..
+tree
+pwd
+cd selinux/
+ls
+ls -l
+vim example-selinux-playbook.yml 
+less README.md 
+sudo yum install w3m
+sudo yum install elinks
+wc example-selinux-playbook.yml 
+vim example-selinux-playbook.yml 
+pwd
+cp example-selinux-playbook.yml ~/rhel8-book/listing97.yaml
+cp example-selinux-playbook.yml /home/ansible/rhce8-book/listing97.yaml
+cd
+cd rhce8-book/
+vim listing97.yaml 
+ansible-playbook listing97.yaml 
+vim ansible.cfg 
+ansible-playbook listing97.yaml 
+cd /usr/share/doc/rhel-system-roles/selinux/
+ls
+vim example-selinux-playbook.yml 
+getsebool -a | less
+pwd
+cd ../timesync/
+ls
+vim example-timesync-playbook.yml 
+pwd
+#cp /usr/share/doc/rhel-system-roles/timesync/example-timesync-playbook.yml 
+cd
+ls
+cd rhce8-book/
+cp /usr/share/doc/rhel-system-roles/timesync/example-timesync-playbook.yml .
+mv example-timesync-playbook.yml exercise93.yaml
+vim exercise93.yaml 
+ansible-playbook exercise93.yaml 
+vim exercise93.yaml 
+ansible-playbook exercise93.yaml 
+#ansible ansible2 -a "timedatectl "
+timedatectl show
+#ansible ansible2 -a "timedatectl show"
+ansible ansible2 -a "timedatectl show"
+ssh root@192.168.4.134
+ls
+vim listing817.j2
+vim listing818.yaml 
+find  .. -name "pascal.py"
+cp ../rhce8/lesson2/pascal.py .
+cp pascal.py listing101.py
+vim listing101.py 
+./listing101.py --list
+./listing101.py --host ansible2
+./listing101.py --host ansible1
+ansible-inventory -i listing101.py --list
+ansible-inventory --help
+ansible-inventory -i listing101.py --graph
+ansible-inventory -i inventory -i listing101.py --list
+ls
+ansible --list
+ansible-inventory --list
+pwd
+cd ..
+grep -R 'import_playbook' *
+grep -R 'include_playbook' *
+grep -R 'include' *
+ls
+cd rhce8-book/
+ls
+vim listing104.yaml
+mkdir tasks
+vim tasks
+vim tasks/service.yaml
+vim tasks/firewall.yaml
+vim tasks/service.yaml
+vim tasks/firewall.yaml
+vim tasks/service.yaml
+ansible-galaxy init gooiweg
+tree gooiweg/
+sudo yum install -y tree
+tree gooiweg/
+vim listing92.yaml
+pwd
+cd rhce8-live/
+find motd.yml
+find -name motd.yml
+find -name "motd*
+"
+ls
+cd lesson9/
+ls
+cd ../lesson10
+cd ../lesson11/
+ls
+cd roles/
+ls
+tree motd
+tree motd2/
+cat motd2/handlers/
+cat motd2/handlers/main.yml 
+cd ..
+pwd
+cd roles/rrr
+cd roles/
+ls
+tree motd
+cat motd/defaults/main.yml 
+cat motd/meta/main.yml 
+vim motd/meta/main.yml 
+vim motd/tasks/main.yml 
+vim motd/templates/motd.j2 
+cat motd/README.md 
+pwd
+cp -R roles/motd/ ~/rhce8-book/roles/
+cp -R motd/ ~/rhce8-book/roles/
+cd ..
+ls
+cp motd-role.yml ../../rhce8-book/exercise91.yaml
+pwd
+cd ../..
+cd gooiweg/meta/
+vim main.yml 
+pwd
+cd ../../rhce8-book/
+vim listing96.yaml
+cd ../rhce8-live/
+ls
+less lesson11
+less lesson11/nginx-role.yml 
+ansible -m ping ansible*
+ls
+cd ../rhce8-book/
+ansible -m ping ansible*
+ls
+ansible -m ping 'ansible*'
+mkdir inventories
+ls
+cd rhce8-book/
+ls
+cat listing101.py 
+cp listing101.py ../inventories/
+ls
+cp inventory ../inventories/
+cd ..
+ansible-inventory -i inventories --list
+sudo vim /etc/hosts
+ansible-inventory -i inventories --list
+vim inventories/inventory 
+ansible-inventory -i inventories --list
+sudo vim /etc/hosts
+ssh ansible3
+ssh ansible4
+ssh-copy-id ansible3
+exit
+ssh-copy-id ansible4
+sudo -i
+ssh ansible1
+ssh root@ansible3
+ssh root@ansible4
+cd rhce8-book/
+vim exercise102-install.yaml
+ansible-playbook exercise102-install.yaml 
+vim inventory 
+ansible-playbook exercise102-install.yaml 
+ssh root@ansible3
+ssh root@ansible4
+ansible-playbook exercise102-install.yaml 
+ssh ansible3
+ssh ansible4
+vim ansible.cfg 
+ansible-playbook exercise102-install.yaml 
+vim ansible.cfg 
+cp exercise102-install.yaml exercise102-remove.yaml
+vim exercise102-remove.yaml 
+ansible-playbook exercise102-remove.yaml 
+vim listing104.yaml
+vim importme.yaml
+mv listing104.yaml listing105.yaml
+mv importme.yaml listing104.yaml
+vim listing105.yaml 
+ansible-playbook listing105.yaml 
+vim listing105.yaml 
+ansible-playbook listing105.yaml 
+ls
+ls listing10*
+vim listing107.yaml 
+mv listing107.yaml listing109.yaml
+rm *wrong*
+vim listing106.yaml
+vim listing107.yaml
+vim listing108.yaml
+ansible-doc firewalld
+vim listing108.yaml
+vim exercise103.yaml
+ansible-doc firewalld
+ansible-playbook exercise103.yaml 
+vim exercise103.yaml 
+ansible-playbook exercise103.yaml 
+ansible-doc copy
+ansible-playbook exercise103.yaml 
+firewall-cmd --get-services
+vim exercise103-vars.yaml 
+
+vim exercise103-vars.yaml 
+vim exercise103-ftp.yaml 
+vim exercise103-vars.yaml 
+vim exercise103-ftp.yaml 
+ls exercise103*
+vim exercise103-copy.yaml 
+vim exercise103.yaml 
+exit
+cd rhce8-book/
+grep firewall *
+vim exercise82.yaml 
+ansible-doc firewalld
+ls -l
+vim lab82.yaml 
+vim exercise103-vars.yaml
+vim exercise103-ftp.yaml
+vim exercise103-copy.yaml
+vim exercise103-ftp.yaml
+exit
+cd rhce8-book/
+ls
+vim exercise103.yaml
+vim exercise103-ftp.yaml
+vim exercise103-vars.yaml 
+vim exercise103.yaml 
+exit
+cd rhce8-book/
+vim exercise103.yaml 
+ansible-playbook exercise103.yaml 
+exit
+cd rhce8-book/
+ls
+vim listing112.j2
+vim listing111.yaml
+ansible-doc template
+ansible-playbook listing111.yaml 
+ansible -a "rm /etc/issue" ansible2
+ansible-playbook listing111.yaml --check --diff
+vim listing111.yaml 
+ansible-playbook listing52.yaml 
+ansible-playbook -vvvv listing52.yaml 
+ls -l
+ansible-playbook --list-tasks exercise81.yaml
+ansible-playbook --start-at-task "add a message"  --step exercise81.yaml
+grep debug *
+cd ../rhce8-live/
+ls
+ls lesson13/
+ls lesson15/
+cd lesson15/
+grep uri *
+cd ..
+grep -r uri * | grep -v ansible.log
+grep -r uri * | grep -v ansible.log | grep -v ex2
+grep -r uri * | grep -v ansible.log | grep -v ec2
+cd ..
+cat rhce8-live/lesson4/web-setup-and-test.yml 
+vim rhce8-book/listing117.yaml
+ansible-playbook -v rhce8-book/listing117.yaml 
+vim rhce8-book/listing117.yaml
+ansible-playbook -v rhce8-book/listing117.yaml 
+vim rhce8-book/listing117.yaml
+ssh root@ansible2
+ssh ansible2
+ansible-playbook -v rhce8-book/listing117.yaml 
+ansible-doc uri
+vim rhce8-book/listing117.yaml
+ansible-doc uri
+vim rhce8-book/listing117.yaml
+cd rhce8-book/
+ansible-playbook listing117.yaml 
+vim listing117.yaml
+ansible-playbook listing117.yaml 
+vim listing117.yaml
+ansible-doc -l | grep aide
+ansible-doc -l | grep trip
+vim listing119.yaml
+ansible-playbook listing119.yaml 
+vim listing119.yaml
+ansible-doc stat
+ansible-doc file
+vim listing119.yaml
+ansible-playbook listing119.yaml 
+ansible-doc file
+vim listing119.yaml
+ansible-playbook listing119.yaml 
+vim listing119.yaml 
+exit
+cd rhce8-book/
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+vim listing1111-test.yaml
+ansible-playbook listing1111-test.yaml 
+ansible-doc vars_prompt
+ansible-doc prompt
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml
+cp listing1111.yaml listing1111-dev.yaml
+vim listing1111.yaml 
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml 
+ansible-playbook listing1111.yaml 
+vim listing1111.yaml 
+vim listing1111-dev2.yaml
+ansible-playbook listing1111-dev2.yaml 
+vim listing1111-dev2.yaml
+ansible-playbook listing1111-dev2.yaml 
+vim listing1111-dev.yaml
+ansible-playbook listing1111-dev.yaml
+vim listing1111-dev.yaml
+ansible-playbook listing1111-dev.yaml
+vim listing1111-dev.yaml
+ssh ansible@192.168.4.220
+vim listing1111.yaml 
+mv listing1111.yaml listing1113.yaml
+ls listing1111*
+cat listing1111-dev.yaml 
+mv listing1111-dev.yaml listing1111.yaml
+vim listing1113.yaml
+ansible-playbook listing1113.yaml 
+vim listing1113.yaml
+ansible-playbook listing1113.yaml 
+vim listing1113.yaml 
+exit
+ls
+cd rhce8-book/
+ls
+vim ansible.cfg 
+ansible all -m ping
+ansible-doc ping
+ansible --help
+ansible-doc ping -b
+ansible all -m ping -b
+ssh root@ansible4
+ansible all -m ping -b
+cat ansible.cfg 
+ansible all -m ping
+ansible-doc user
+vim exercise133.yaml
+ssh root@ansible4
+ansible-playbook exercise133.yaml 
+mv exercise133.yaml exercise133-1.yaml
+vim exercise133-1.yaml 
+ansible all -m ping
+ansible ansible4 -m raw -a "usermod -aG wheel ansible" -u root -k
+ansible all -m ping
+ansible ansible4 -m raw -a "usermod -aG wheel ansible" -u root -k
+ansible all -m ping
+ssh root@ansible4
+ansible all -m ping --flush-cache
+ansible all -m ping
+history
+vim exercise111.j2
+sudo yum install -y httpd
+sudo vim /etc/httpd/conf/httpd.conf 
+sed -i -e '/^#/ d'
+sed -i -e '/^#/ d' /etc/httpd/conf/httpd.conf 
+sudo sed -i -e '/^#/ d' /etc/httpd/conf/httpd.conf 
+vim /etc/httpd/conf/httpd.conf 
+sudo vim /etc/httpd/conf/httpd.conf 
+cp /etc/httpd/conf/httpd.conf 
+cp /etc/httpd/conf/httpd.conf  .
+cp httpd.conf exercise111-httpd.j2
+vim exercise111-httpd.j2 
+vim exercise111.yaml
+ansible-doc firewalld
+vim exercise111.yaml
+ansible-doc firewalld
+vim exercise111.yaml
+ansible-playbook --syntax-check exercise111.yaml 
+ansible-playbook --check --diff exercise111.yaml 
+vim exercise111.yaml 
+ansible-playbook --step exercise111.yaml 
+vim exercise111.yaml 
+ansible-playbook --list-tasks exercise111.yaml
+ansible-playbook --start-at-task="copy template file"
+ansible-playbook --start-at-task="copy template file" exercise111.yaml
+exit

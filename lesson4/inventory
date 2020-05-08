@@ -1,0 +1,16 @@
+control.example.com
+ansible01.example.com
+ansible02.example.com
+ansible03.example.com
+
+[lamp]
+ansible01.example.com
+
+[file]
+ansible02.example.com
+
+[nodes:children]
+lamp
+file
+
+

@@ -1,0 +1,12 @@
+vim /etc/hosts
+cat /etc/hosts
+exit
+lsblk
+exit
+history
+exit
+cd /etc/ansible/
+ls
+cd /etc/sudoers.d/
+ls
+exit

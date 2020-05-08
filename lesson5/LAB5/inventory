@@ -1,0 +1,11 @@
+ansible03.example.com
+
+[lamp]
+ansible01.example.com
+
+[file]
+ansible02.example.com
+
+[node:children]
+lamp
+file
