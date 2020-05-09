@@ -1,6 +1,7 @@
 ---
 - name: set up web server
   hosts: all
+  force_handlers: True
   tasks:
     - name: install httpd
       yum: 
