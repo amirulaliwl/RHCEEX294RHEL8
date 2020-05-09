@@ -5,7 +5,7 @@
   - name: check local time
     command: date
     register: command_result
-    changed_when: false
+    #changed_when: false
 
   - name: print local time
     debug:
