@@ -1,6 +1,6 @@
 ---
 - name: create apache vhost
-  hosts: lamp
+  hosts: lamp_test
   
   roles:
     - vhost
