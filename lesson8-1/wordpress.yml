@@ -1,6 +1,7 @@
 ---
 - name: install wordpress using a role
-  hosts: ansible2.example.com
+  hosts: ansible02.example.com
   
   roles:
-    - wordpress
+    - /home/ansible/.ansible/collections/ansible_collections/dsglaser/cis_security/roles/cis_security
+ 
