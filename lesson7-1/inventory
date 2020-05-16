@@ -2,6 +2,7 @@ ansible01.example.com
 ansible02.example.com
 ansible03.example.com
 
+
 [lamptest]
 ansible03.example.com
 
