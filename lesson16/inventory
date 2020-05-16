@@ -1,16 +1,16 @@
-control.example.com
-ansible1.example.com
-ansible2.example.com
-ansible3.example.com
+ansible01.example.com
+ansible02.example.com
+ansible03.example.com
 
-[lamp]
-ansible1.example.com
+[lamp_test]
+ansible03.example.com
 
-[file]
-ansible2.example.com
+[lamp_prod]
+ansible01.example.com
+ansible02.example.com
 
 [nodes:children]
-lamp
-file
+lamp_test
+lamp_prod
 
 
