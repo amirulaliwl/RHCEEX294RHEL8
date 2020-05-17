@@ -9,7 +9,7 @@ ansible03.example.com
 ansible01.example.com
 ansible02.example.com
 
-[nodes:children]
+[servers:children]
 lamp_test
 lamp_prod
 
