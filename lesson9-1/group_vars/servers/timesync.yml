@@ -5,4 +5,4 @@ timesync_ntp_servers:
     iburst: yes
   - hostname: 2.rhel.pool.ntp.org
     iburst: yes
-timezone: America/Los_Angeles
+timezone: Asia/Kuala_Lumpur 
